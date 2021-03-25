@@ -3,6 +3,7 @@ environment.go
 config.yml
 artifacts
 logs
+node_modules
 
 # Binaries for programs and plugins
 *.exe

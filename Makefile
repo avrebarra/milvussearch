@@ -15,6 +15,11 @@ build:
 	go generate ./...
 	go build -o ./dist/${NAME} .
 
+## build-linux: Build binary applications for linux
+build-linux:
+	go generate ./...
+	GOOS=linux go build -o ./dist/${NAME} .
+
 .PHONY: help
 all: help
 help: Makefile

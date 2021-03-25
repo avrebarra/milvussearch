@@ -1,9 +1,9 @@
-module github.com/avrebarra/milvus-dating
+module github.com/avrebarra/milvussearch
 
 go 1.15
 
 require (
-	github.com/go-playground/validator v9.31.0+incompatible
-	github.com/labstack/echo/v4 v4.2.1
-	gitlab.linkaja.com/gopkg/validator v0.0.0-20210223095439-c22d3501475c
+	github.com/milvus-io/milvus-sdk-go v1.0.0
+	github.com/urfave/cli v1.22.5
+	gopkg.in/yaml.v3 v3.0.0-20210107192922-496545a6307b
 )
