@@ -142,8 +142,8 @@ func SetupCollection() (err error) {
 		status, err = client.CreateCollection(milvus.CollectionParam{
 			CollectionName: collectionname,
 			Dimension:      int64(vectordimension),
-			IndexFileSize:  100,
 			MetricType:     int64(milvus.L2),
+			IndexFileSize:  100,
 		})
 		if err != nil || !status.Ok() {
 			err = fmt.Errorf("cannot create collection: %w", err)
@@ -294,6 +294,14 @@ func PerformSearch() (err error) {
 		QueryEntities: []milvus.Entity{
 			{FloatData: searchvector},
 			// {FloatData: searchvector},
+			// {FloatData: searchvector},
+			// {FloatData: searchvector},
+			// {FloatData: searchvector},
+			// {FloatData: searchvector},
+			// {FloatData: searchvector},
+			// {FloatData: searchvector},
+			// {FloatData: searchvector},
+			// {FloatData: searchvector},
 		},
 		Topk:        10,
 		ExtraParams: `{"nprobe" : 32}`,
@@ -306,9 +314,10 @@ func PerformSearch() (err error) {
 	}
 
 	log.Println("search results: ")
-	for _, r := range results.QueryResultList {
+	for i, r := range results.QueryResultList {
+		log.Println(fmt.Sprintf("search for query: %d", i))
 		for j, id := range r.Ids {
-			log.Println(fmt.Sprintf("- result no %d: ID:%d (hash:%s)\tDIST:%f", j, id, SHA1(fmt.Sprint(id))[0:5], r.Distances[j]))
+			log.Println(fmt.Sprintf("  - result no %d: ID:%d (hash:%s)\tDIST:%f", j, id, SHA1(fmt.Sprint(id))[0:5], r.Distances[j]))
 		}
 	}
 

@@ -1,22 +1,22 @@
 id: "raja-gopal"
 traits:
-  - name: wika_salim
+  - name: ngefans_terhadap_wika_salim
     tendency: 0
-  - name: chelsie_monica
+  - name: ngefans_terhadap_chelsie_monica
     tendency: 0
-  - name: amanda_manopo
+  - name: ngefans_terhadap_amanda_manopo
     tendency: 0
-  - name: mikha_tambayong
+  - name: ngefans_terhadap_mikha_tambayong
     tendency: 0.5
-  - name: nasya_marcella
+  - name: ngefans_terhadap_nasya_marcella
     tendency: 0.5
-  - name: chelsea_islan
+  - name: ngefans_terhadap_chelsea_islan
     tendency: 0.5
-  - name: isyana_saraswati
+  - name: ngefans_terhadap_isyana_saraswati
     tendency: 0.5
-  - name: raisa
+  - name: ngefans_terhadap_raisa
     tendency: 0.5
-  - name: mendoan
+  - name: ngefans_terhadap_mendoan
     tendency: 0.5
 
   - name: trait-9
