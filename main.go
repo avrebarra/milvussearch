@@ -67,6 +67,8 @@ var (
 func init() {
 	var err error
 
+	log.SetFlags(0)
+
 	log.Println("setting up connection")
 	clientgrpc := milvus.Milvusclient{}
 	client = milvus.NewMilvusClient(clientgrpc.Instance)
